@@ -1945,6 +1945,9 @@ template {
 [hidden] {
   display: none; }
 
+.not-relative {
+  position: static; }
+
 .main-header a,
 .main-footer a,
 .main a {
@@ -2535,15 +2538,14 @@ img {
         -ms-flex-wrap: wrap;
             flex-wrap: wrap; }
   .main-nav {
-    left: -30px;
+    left: 0;
     top: 104px;
     position: absolute;
     -webkit-flex-wrap: wrap;
         -ms-flex-wrap: wrap;
             flex-wrap: wrap;
     max-height: 0;
-    width: -webkit-calc(100% + 60px);
-    width: calc(100% + 60px);
+    width: 100%;
     padding: 0;
     background-color: #ffffff;
     z-index: 103;
@@ -2562,7 +2564,7 @@ img {
       display: -webkit-flex;
       display: -ms-flexbox;
       display: flex;
-      padding: 0 10% 7rem 10%;
+      padding: 0 10% 3rem 10%;
       -webkit-transition: max-height 0.5s;
       -o-transition: max-height 0.5s;
       transition: max-height 0.5s; }
