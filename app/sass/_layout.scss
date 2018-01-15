@@ -1,3 +1,7 @@
+.not-relative {
+  position: static;
+}
+
 .main-header,
 .main-footer,
 .main {
@@ -8,7 +12,8 @@
 }
 
 .main-header {
-  background: url('../img/gadgets-bg.png') 76% 260% no-repeat, url('../img/circle-bg.png') 0 no-repeat, linear-gradient(to bottom, #ffffff, #ebf5ff);
+  position: relative;
+  background: url('../img/gadgets-bg.png') 76% 300% no-repeat, url('../img/circle-bg.png') 0 no-repeat, linear-gradient(to bottom, #ffffff, #ebf5ff);
 }
 
 .main-header__top {
@@ -396,7 +401,47 @@
 
 .main-logo {
   svg {
-    width: 220px;
-    height: 118px;
+    width: 210px;
+    height: 100px;
+  }
+}
+
+.burger-toggle {
+  position: relative;
+  width: 37px;
+  height: 28px;
+  cursor: pointer;
+  transition: 0.25s ease-in-out;
+  span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: inline-block;
+    width: 100%;
+    border: 2px solid $text;
+    background-color: lightcoral;
+    border-radius: 10px;
+    transform-origin: left center;
+    transition: 0.35s ease-in-out;
+    &:nth-child(2) {
+      top: calc(50% - 1px);
+    }
+    &:nth-child(3) {
+      top: calc(100% - 2px);;
+    }
+  }
+  &--close {
+    span {
+      transition: 0.25s ease-in-out;
+      &:nth-child(1) {
+        transform: rotate(45deg);
+      }
+      &:nth-child(3) {
+        transform: rotate(-45deg);
+      }
+      &:nth-child(2) {
+        opacity: 0;
+      }
+    }
   }
 }
