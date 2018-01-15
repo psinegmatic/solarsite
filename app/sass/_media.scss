@@ -1,0 +1,291 @@
+@import "vars";
+
+@media only screen and (max-width : 1200px) {
+  .main-nav__item {
+    .main-nav__link {
+      &--contacts {
+        margin-right: 1rem;
+        &:after {
+          left: calc(100% + 0.5rem);
+        }
+      }
+    }
+  }
+  .feed-form {
+    padding: 3rem 4.5rem 2rem 4.5rem;
+  }
+}
+
+@media only screen and (max-width : 992px) {
+  .main-header {
+    padding-bottom: 24rem;
+    background: url('../img/gadgets-bg.png') 85% 29rem/80% no-repeat, url('../img/cicles-header.png') 86% 110%/60% no-repeat, linear-gradient(to bottom, #ffffff, #ebf5ff);
+  }
+  .main-header__top {
+    flex-wrap: wrap;
+  }
+  .main-nav {
+    display: none;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 0 5%;
+  }
+  .main-nav__item {
+    width: 100%;
+  }
+  .start-home {
+    padding: 6.5rem 0;
+    text-align: center;
+    .start-home__message {
+      padding: 0 1rem;
+      margin-bottom: 2rem;
+    }
+  }
+  .features {
+    padding: 6.5rem 0 7rem 0;
+    text-align: center;
+  }
+  .main-feature__img {
+    margin: 0 auto 2.5rem auto;
+  }
+  .stack {
+    padding: 7rem 0 11rem 0;
+    text-align: center;
+    .main-section__title {
+      padding: 0 8rem;
+    }
+    .diagram-circle {
+      margin: 0 auto;
+      background: url(../img/laptop-bg.png) 34% 99% no-repeat;
+    }
+  }
+  .stack__text {
+    padding: 0 2rem;
+    margin-bottom: 3rem;
+  }
+  .portfolio {
+    padding: 1rem 0 7rem 0;
+    text-align: center;
+    .portfolio__text {
+      padding: 0 4rem;
+    }
+  }
+  .main-card {
+    text-align: left;
+    margin-bottom: 2rem;
+    &--blue {
+      margin-left: auto;
+    }
+    &--darkblue {
+      margin-left: auto;
+    }
+  }
+  .main-footer {
+    background: url(../img/footer-illustration.png) 41% 105% no-repeat, url(../img/circles-footer.png) 50% -35% no-repeat #233261;
+    text-align: center;
+  }
+  .contacts {
+    margin-bottom: 20rem;
+  }
+  .contacts__section {
+    padding: 3rem 25%;
+    margin-bottom: 4rem;
+  }
+  .contacts__adress {
+    padding: 0 2rem;
+  }
+  .contacts__form {
+    width: 79%;
+    margin: 0 auto;
+  }
+  .main-footer__items {
+    padding: 1rem 0;
+    text-align: left;
+  }
+  .main-footer__item--disc {
+    width: 40%;
+    margin-left: 1rem;
+  }
+  .main-footer__disc {
+    @include fontSize(0.875)
+  }
+  .socials {
+    @include fontSize(0.875);
+    justify-content: flex-end;
+    flex-wrap: wrap;
+  }
+  .socials__item {
+    &:first-child {
+      width: 100%;
+      margin: 0 0 0.5rem 0;
+      text-align: right;
+    }
+  }
+}
+
+@media only screen and (max-width : 767px) {
+  .main-header {
+    padding-bottom: 17rem;
+    background: url('../img/gadgets-bg.png') 50% 20rem/70% no-repeat, url('../img/cicles-header.png') 86% 110%/60% no-repeat, linear-gradient(to bottom, #ffffff, #ebf5ff);
+  }
+
+  .start-home {
+    padding: 0;
+    .start-home__message {
+      @include fontSize(1, 1.7);
+      padding: 0;
+    }
+  }
+  .page-title {
+    @include fontSize(1.5, 2);
+    margin-bottom: 1rem;
+  }
+  .features {
+    padding: 4rem 0 5rem 0;
+  }
+  .main-section__title {
+    @include fontSize(1.2);
+    margin-bottom: 0.5rem;
+  }
+  .main-section__text {
+    padding: 0 0.5rem;
+    margin-bottom: 0;
+    @include fontSize(1);
+  }
+  .main-feature__text {
+    padding: 0 2rem;
+  }
+  .stack {
+    padding: 3rem 0 4.5rem 0;
+    .main-section__title {
+      padding: 0;
+    }
+    .diagram-circle {
+      width: 100%;
+      height: 23rem;
+      background: url(../img/laptop-bg.png) 34% 99%/68% no-repeat
+    }
+  }
+  .diagram-circle__item {
+    transform: translate(-50%, -50%) scale(0.9);
+  }
+  .portfolio {
+    padding: 1rem 0 3rem 0;
+    .portfolio__text {
+      padding: 0;
+      margin-bottom: 3.5rem;
+    }
+    .main-card {
+      margin: 0 auto 1.5rem auto;
+      text-align: left;
+    }
+  }
+  .main-footer {
+    background: url(../img/footer-illustration.png) 41% 77%/75% no-repeat, url(../img/circles-footer.png) 50% -35% no-repeat #233261;
+    padding: 0;
+    .main-section__title {
+      margin-bottom: 1rem;
+    }
+  }
+  .contacts__section {
+    padding: 3rem 0;
+    margin-bottom: 1rem;
+  }
+  .contacts__adress {
+    padding: 0;
+  }
+  .contacts__form {
+    width: 100%;
+    padding: 2rem 1rem;
+    .btn {
+      margin-bottom: 1rem;
+    }
+  }
+  .feed-form__title {
+    @include fontSize(1.275);
+  }
+  .feed-form__input {
+    margin-bottom: 1rem;
+  }
+  .contacts {
+    margin-bottom: 14rem;
+  }
+  .main-footer__items {
+    flex-wrap: wrap;
+  }
+  .main-footer__item {
+    width: 100%;
+    margin: 0;
+    &--disc {
+      margin-bottom: 2rem;
+    }
+  }
+  .socials {
+    justify-content: flex-start;
+  }
+  .socials__item {
+    &:first-child {
+      text-align: left;
+    }
+  }
+}
+
+@media only screen and (max-width : 520px) {
+  .main-header {
+    background: url('../img/gadgets-bg.png') 50% 23rem/75% no-repeat, url('../img/cicles-header.png') 86% 110%/60% no-repeat, linear-gradient(to bottom, #ffffff, #ebf5ff);
+  }
+}
+
+@media only screen and (max-width : 480px) {
+  .main-header {
+    background: url('../img/gadgets-bg.png') 50% 24rem/75% no-repeat, url('../img/cicles-header.png') 86% 110%/60% no-repeat, linear-gradient(to bottom, #ffffff, #ebf5ff);
+  }
+  .diagram-circle__item {
+    transform: translate(-50%, -50%) scale(0.64);
+    &--html {
+      top: 23%;
+      left: 34%;
+    }
+    &--sql {
+      top: 21%;
+      left: 69%;
+    }
+    &--node {
+      top: 41%;
+      left: 89%;
+    }
+    &--blockchain {
+      top: 72%;
+      left: 87%;
+    }
+    &--android {
+      top: 86%;
+      left: 52%;
+    }
+    &--ios {
+      top: 77%;
+      left: 18%;
+    }
+    &--machine {
+      top: 49%;
+      left: 12%;
+    }
+    &--net {
+      top: 54%;
+      left: 53%;
+    }
+  }
+}
+
+@media only screen and (max-width : 420px) {
+  .main-header {
+    background: url('../img/gadgets-bg.png') 50% 28rem/75% no-repeat, url('../img/cicles-header.png') 86% 110%/60% no-repeat, linear-gradient(to bottom, #ffffff, #ebf5ff);
+  }
+}
+
+@media only screen and (max-width : 380px) {
+  .main-header {
+    background: url('../img/gadgets-bg.png') 50% 34rem/75% no-repeat, url('../img/cicles-header.png') 86% 110%/60% no-repeat, linear-gradient(to bottom, #ffffff, #ebf5ff);
+  }
+}
+
