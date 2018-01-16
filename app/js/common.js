@@ -31,11 +31,15 @@ $(window).scroll(function () {
 	}
 });
 
+//Отображение меню при скролле вверх
 var lastScrollTop = 0;
 $(window).scroll(function (event) {
 	var st = $(this).scrollTop();
-	console.log(st);
+	console.log(lastScrollTop - st);
 	if (st > lastScrollTop) {
+		var burger = $('.burger-toggle');
+		burger.removeClass('burger-toggle--close');
+		burger.siblings('.main-nav').removeClass('main-nav--expand');
 		$('.fixed-wrapper').removeClass("fixed-wrapper--upsticky");
 	} else if (st > 300) {
 		$('.fixed-wrapper').addClass("fixed-wrapper--upsticky");
