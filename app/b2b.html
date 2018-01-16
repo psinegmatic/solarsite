@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+	<meta charset="utf-8">
+
+	<title>Title</title>
+	<meta name="description" content="">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<meta property="og:image" content="path/to/image.jpg">
+	<link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+	<link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
+
+	<!-- Chrome, Firefox OS and Opera -->
+	<meta name="theme-color" content="#000">
+	<!-- Windows Phone -->
+	<meta name="msapplication-navbutton-color" content="#000">
+	<!-- iOS Safari -->
+	<meta name="apple-mobile-web-app-status-bar-style" content="#000">
+</head>
+
+<body>
+<header class="product__header">
+	<div class="container">
+		<div class="row">
+			<div class="col-12">
+				<h1 class="page-title">B2BPoint
+					<div class="back">
+						<a class="back-arrow" href="index.html">
+							<span class="top"></span>
+							<span class="middle"></span>
+							<span class="bottom"></span>
+						</a>
+					</div>
+				</h1>
+				<h5 class="page-subtitle">Универсальный агрегатор закупок</h5>
+				<a href="http://b2bpoint.ru" target="_blank" class="outer-link">b2bpoint.ru</a>
+			</div>
+		</div>
+	</div>
+</header>
+<main class="product__main">
+	<div class="container">
+		<div class="row">
+			<div class="col-10">
+				<div class="article">
+					<h3>Цели и задачи</h3>
+					<p>Создание системы поиска тендеров по закупкам, с возможностью создавать кастомизированные под конкретного заказчика сайты-витрины закупок. Кастомизация позволяет каждой витрине отображать индивидуальное подмножество актуальных на данный момент тендеров в собственном внешнем виде (например, сайт содержащий все тендеры определённой компании с её логотипами и в корпоративных цветах). При этом сбор данных о тендерах, управление этими данными и поиск в них должен осуществляться централизованно, и все витрины должны отображать наиболее актуальное состояние этих данных.</p>
+					<h3>Реализация</h3>
+					<p>Для построения данной системы был применен мультетенантный подход, при котором одно веб-приложение обслуживает одновременно несколько различных доменов, при этом система определяет, с какого именно домена приходит запрос и формирует ответ в соответствии с этим. Мультетенантное веб-приложение Витрины построено на платформе ASP.NET MVC. Поисковый бэкенд системы также построен на платформе .NET с применением сервисно-ориентированной архитектуры. Сбор данных осуществляется как с серверов Единой Информационной Системы в сфере закупок (zakupki.gov.ru), так и непосредственно с ряда торговых площадок. Для реализации морфологического поиска может применяться как собственный поисковый движок, основанный на Sphinx, так и внешние сервисы системы СТАР (fintender.ru/star), основанный на Elastic Search.</p>
+					<h3>Реузльтат</h3>
+					<p>Система находится в эксплуатации, основной тенант системы доступен по адресу b2bpoint.ru. Также на базе этой системы создано более полусотни витрин закупок для ряда городов и регионов РФ, отдельных организаций, а также открытая часть площадки для проведения отбора подрядных организаций по капремонту компании РТС-Тендер (615.rts-tender.ru).
+					</p>
+					<p>Данное ПО внесено в Единый реестр российских программ для электронных вычислительных машин и баз данных.</p>
+					<a href="" class="outer-link">Инструкция по использованию</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</main>
+
+<link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700" rel="stylesheet">
+<link rel="stylesheet" href="css/main.min.css">
+<script src="js/scripts.min.js"></script>
+</body>
+</html>

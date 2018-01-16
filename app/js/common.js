@@ -35,13 +35,14 @@ $(window).scroll(function () {
 var lastScrollTop = 0;
 $(window).scroll(function (event) {
 	var st = $(this).scrollTop();
-	console.log(lastScrollTop - st);
+	console.log(st);
 	if (st > lastScrollTop) {
 		var burger = $('.burger-toggle');
 		burger.removeClass('burger-toggle--close');
 		burger.siblings('.main-nav').removeClass('main-nav--expand');
+
 		$('.fixed-wrapper').removeClass("fixed-wrapper--upsticky");
-	} else if (st > 300) {
+	} else if (st > 400) {
 		$('.fixed-wrapper').addClass("fixed-wrapper--upsticky");
 	}
 	lastScrollTop = st;
