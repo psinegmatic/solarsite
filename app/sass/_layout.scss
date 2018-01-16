@@ -14,6 +14,26 @@
 .main-header {
   position: relative;
   background: url('../img/gadgets-bg.png') 76% 300% no-repeat, url('../img/circle-bg.png') 0 no-repeat, linear-gradient(to bottom, #ffffff, #ebf5ff);
+  &--fixed {
+    padding-top: 104px;
+  }
+  .fixed-wrapper {
+    &--fixed {
+      top: 0;
+      left: 0;
+      position: fixed;
+      width: 100%;
+      background-color: #ffffff;
+      z-index: 100;
+      transition: all 0.5s;
+      .main-nav__item .main-nav__link {
+        padding: 1.25rem 1rem;
+        &--lang {
+          padding: 0.75rem;
+        }
+      }
+    }
+  }
 }
 
 .main-header__top {
