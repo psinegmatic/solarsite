@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+	<meta charset="utf-8">
+
+	<title>Title</title>
+	<meta name="description" content="">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<meta property="og:image" content="path/to/image.jpg">
+	<link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+	<link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
+
+	<!-- Chrome, Firefox OS and Opera -->
+	<meta name="theme-color" content="#000">
+	<!-- Windows Phone -->
+	<meta name="msapplication-navbutton-color" content="#000">
+	<!-- iOS Safari -->
+	<meta name="apple-mobile-web-app-status-bar-style" content="#000">
+</head>
+
+<body>
+<header class="product__header">
+	<div class="container">
+		<div class="row">
+			<div class="col-12">
+				<h1 class="page-title">B2BPoint
+					<div class="back">
+						<a class="back-arrow" href="index-en.html">
+							<span class="top"></span>
+							<span class="middle"></span>
+							<span class="bottom"></span>
+						</a>
+					</div>
+				</h1>
+				<a href="http://b2bpoint.ru" target="_blank" class="outer-link">b2bpoint.ru</a>
+			</div>
+		</div>
+	</div>
+</header>
+<main class="product__main">
+	<div class="container">
+		<div class="row">
+			<div class="col-10">
+				<div class="article">
+					<h3>Project goals</h3>
+					<p>Project goal was to implement procurements tenders search system that will allow creating customized showcase procurements sites for every client. Customization allows each showcase to present filtered data in a way chosen by certain customer (e.g., a site will contain all tenders of a certain company with its logos and corporate colors). The collection of data concerning tenders, their management and search among them should be centralized and all showcases should display the most relevant state of these data.</p>
+					<h3>Implementation</h3>
+					<p>We have used multitenant approach for implementation of this system, where one web application is used by several domains and system determines exact domain that has sent request and forms a response in accordance with it. The Showcase multitenant web application is built on ASP.NET MVC platform. Backend system responsible for search is built with .Net platform using Service oriented architecture. Data is collected from servers of Unified Information System in procurements area (zakupki.gov.ru) and directly from several procurements platforms. For morphological search, we can use both custom search engine based on Sphinx and external services of STAR (based on Elastic Search).</p>
+					<h3>Outcome</h3>
+					<p>The system has been successfully implemented. Main tenant is available on <a href="http://b2bpoint.ru" class="outer-link">b2bpoint.ru</a>. In addition, there are more than 50 showcase-sites for companies and organizations, cities and regions of the Russian Federation.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</main>
+
+<link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700" rel="stylesheet">
+<link rel="stylesheet" href="../css/main.min.css">
+<script src="js/scripts.min.js"></script>
+</body>
+</html>
