@@ -2697,12 +2697,19 @@ a {
   .burger-toggle {
     display: none; } }
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1199px) {
   .main-nav__item .main-nav__link--contacts {
     margin-right: 1rem; }
     .main-nav__item .main-nav__link--contacts:after {
       left: -webkit-calc(100% + 0.5rem);
       left: calc(100% + 0.5rem); }
+  .feed-form {
+    padding: 3rem 4.5rem 2rem 4.5rem; }
+  .back {
+    top: -55%;
+    left: 0; } }
+
+@media only screen and (max-width: 991px) {
   .fixed-wrapper--fixed {
     max-height: 0;
     overflow: hidden; }
@@ -2721,10 +2728,6 @@ a {
       -webkit-transition: opacity 0.6s;
       -o-transition: opacity 0.6s;
       transition: opacity 0.6s; }
-  .feed-form {
-    padding: 3rem 4.5rem 2rem 4.5rem; } }
-
-@media only screen and (max-width: 991px) {
   .main-header {
     padding-bottom: 24rem;
     background: url("../img/gadgets-bg.png") 85% 29rem/80% no-repeat, url("../img/cicles-header.png") 86% 110%/60% no-repeat, -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#ebf5ff));
@@ -2898,6 +2901,12 @@ a {
     font-size: 1.5rem;
     line-height: 2rem;
     margin-bottom: 1rem; }
+  .product__header .page-title {
+    font-size: 32px;
+    line-height: 48px;
+    font-size: 2rem;
+    line-height: 3rem;
+    margin-bottom: 0; }
   .features {
     padding: 4rem 0 5rem 0; }
   .main-section__title {
@@ -3031,3 +3040,8 @@ a {
     background: url("../img/gadgets-bg.png") 50% 34rem/75% no-repeat, url("../img/cicles-header.png") 86% 110%/60% no-repeat, -webkit-linear-gradient(top, #ffffff, #ebf5ff);
     background: url("../img/gadgets-bg.png") 50% 34rem/75% no-repeat, url("../img/cicles-header.png") 86% 110%/60% no-repeat, -o-linear-gradient(top, #ffffff, #ebf5ff);
     background: url("../img/gadgets-bg.png") 50% 34rem/75% no-repeat, url("../img/cicles-header.png") 86% 110%/60% no-repeat, linear-gradient(to bottom, #ffffff, #ebf5ff); } }
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .main-card {
+    width: 14.5rem;
+    height: 14.5rem; } }
