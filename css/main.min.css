@@ -2291,8 +2291,8 @@ template {
   transition: 0.35s all; }
   .feed-form__input:focus {
     outline: none;
-    -webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, 0.28);
-            box-shadow: 0 3px 9px rgba(0, 0, 0, 0.28);
+    -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.28);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.28);
     -webkit-transition: 0.35s all;
     -o-transition: 0.35s all;
     transition: 0.35s all; }
