@@ -18,8 +18,6 @@ var gulp = require('gulp'),
     cheerio = require('gulp-cheerio'),
     replace = require('gulp-replace');
 
-// Пользовательские скрипты проекта
-
 gulp.task('common-js', function () {
     return gulp.src([
         'app/js/common.js'
@@ -33,10 +31,10 @@ gulp.task('js', ['common-js'], function () {
     return gulp.src([
         'app/libs/jquery/dist/jquery.min.js',
         'app/libs/jquery-validation/dist/jquery.validate.min.js',
-        'app/js/common.min.js' // Всегда в конце
+        'app/js/common.min.js'
     ])
         .pipe(concat('scripts.min.js'))
-        // .pipe(uglify()) // Минимизировать весь js (на выбор)
+        .pipe(uglify())
         .pipe(gulp.dest('app/js'))
         .pipe(browserSync.reload({stream: true}));
 });
@@ -46,9 +44,7 @@ gulp.task('browser-sync', function () {
         server: {
             baseDir: 'app'
         },
-        notify: false,
-        // tunnel: true,
-        // tunnel: "projectmane", //Demonstration page: http://projectmane.localtunnel.me
+        notify: false
     });
 });
 
@@ -57,7 +53,7 @@ gulp.task('sass', function () {
         .pipe(sass({outputStyle: 'expand'}).on("error", notify.onError()))
         .pipe(rename({suffix: '.min', prefix: ''}))
         .pipe(autoprefixer(['last 15 versions']))
-        // .pipe(cleanCSS()) // Опционально, закомментировать при отладке
+        .pipe(cleanCSS())
         .pipe(gulp.dest('app/css'))
         .pipe(browserSync.reload({stream: true}));
 });
@@ -76,13 +72,11 @@ gulp.task('imagemin', function () {
 
 gulp.task('svg', function () {
     return gulp.src('app/img/svg/*.svg')
-    // minify svg
         .pipe(svgmin({
             js2svg: {
                 pretty: true
             }
         }))
-        // remove all fill, style and stroke declarations in out shapes
         .pipe(cheerio({
             run: function ($) {
                 $('[fill]').removeAttr('fill');
@@ -91,9 +85,7 @@ gulp.task('svg', function () {
             },
             parserOptions: {xmlMode: true}
         }))
-        // cheerio plugin create unnecessary string '&gt;', so replace it.
         .pipe(replace('&gt;', '>'))
-        // build svg sprite
         .pipe(svgSprite({
             mode: {
                 symbol: {
@@ -105,24 +97,19 @@ gulp.task('svg', function () {
 });
 
 gulp.task('build', ['removedist', 'imagemin', 'sass', 'js'], function () {
-
     var buildFiles = gulp.src([
         'app/*.html',
         'app/.htaccess'
     ]).pipe(gulp.dest('dist'));
-
     var buildEn = gulp.src([
 		'app/en/*.html'
     ]).pipe(gulp.dest('dist/en'));
-
     var buildCss = gulp.src([
         'app/css/main.min.css'
     ]).pipe(gulp.dest('dist/css'));
-
     var buildJs = gulp.src([
         'app/js/scripts.min.js'
     ]).pipe(gulp.dest('dist/js'));
-
     var buildFonts = gulp.src([
         'app/fonts/**/*'
     ]).pipe(gulp.dest('dist/fonts'));
@@ -130,7 +117,6 @@ gulp.task('build', ['removedist', 'imagemin', 'sass', 'js'], function () {
 });
 
 gulp.task('deploy', function () {
-
     var conn = ftp.create({
         host: 'hostname.com',
         user: 'username',
@@ -138,7 +124,6 @@ gulp.task('deploy', function () {
         parallel: 10,
         log: gutil.log
     });
-
     var globs = [
         'dist/**',
         'dist/.htaccess',
