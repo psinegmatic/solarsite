@@ -140,6 +140,8 @@
   margin-bottom: 2.5rem;
   background-color: #eff7ff;
   svg {
+    width: 100px;
+    height: 100px;
     fill: #537eff;
   }
 }
@@ -373,6 +375,10 @@
   &:not(:last-child) {
     margin-right: 1rem;
   }
+  svg {
+    width: 25px;
+    height: 25px;
+  }
 }
 
 .main-card {
@@ -415,6 +421,13 @@
     svg {
       fill: #586495;
     }
+  }
+}
+
+.main-card__img {
+  svg {
+    width: 100px;
+    height: 100px;
   }
 }
 
