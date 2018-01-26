@@ -2272,6 +2272,24 @@ template {
   line-height: 2.8125rem;
   font-weight: 600; }
 
+.form-group {
+  width: 100%;
+  position: relative; }
+  .form-group label.error {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0.2rem;
+    color: #f24841;
+    text-align: left;
+    font-size: 12px;
+    line-height: 18px;
+    font-size: 0.75rem;
+    line-height: 1.125rem; }
+  .form-group input.error,
+  .form-group textarea.error {
+    border-color: #f24841; }
+
 .feed-form__input {
   width: 100%;
   padding: 0.75rem 1rem;
@@ -2283,7 +2301,7 @@ template {
           border-radius: 0.25rem;
   -webkit-box-shadow: none;
           box-shadow: none;
-  border: none;
+  border: 1px solid transparent;
   margin-bottom: 1.5rem;
   resize: none;
   -webkit-transition: 0.35s all;
@@ -2291,8 +2309,7 @@ template {
   transition: 0.35s all; }
   .feed-form__input:focus {
     outline: none;
-    -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.28);
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.28);
+    border-color: #acb2c9;
     -webkit-transition: 0.35s all;
     -o-transition: 0.35s all;
     transition: 0.35s all; }

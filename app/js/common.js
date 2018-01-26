@@ -1,3 +1,4 @@
+//Выпадающее мобильное меню
 function expandMenu() {
 	var burger = $('.burger-toggle');
 	burger.toggleClass('burger-toggle--close');
@@ -39,10 +40,53 @@ $(window).scroll(function (event) {
 		var burger = $('.burger-toggle');
 		burger.removeClass('burger-toggle--close');
 		burger.siblings('.main-nav').removeClass('main-nav--expand');
-
 		$('.fixed-wrapper').removeClass("fixed-wrapper--upsticky");
 	} else if (st > 400) {
 		$('.fixed-wrapper').addClass("fixed-wrapper--upsticky");
 	}
 	lastScrollTop = st;
+});
+
+//Валидация формы
+$(function() {
+	$("form[name='contact']").validate({
+		rules: {
+			name: "required",
+			email: {
+				required: true,
+				email: true
+			},
+			feedback: {
+				required: true
+			}
+		},
+		messages: {
+			name: "Пожалуйста, введите ваше имя",
+			email: "Пожалуйста, введите mail",
+			feedback: "Сообщение не может быть пустым"
+		},
+		submitHandler: function(form) {
+			form.submit();
+		}
+	});
+	$("form[name='contact-en']").validate({
+		rules: {
+			name: "required",
+			email: {
+				required: true,
+				email: true
+			},
+			feedback: {
+				required: true
+			}
+		},
+		messages: {
+			name: "Please, write your name",
+			email: "Please, write your email",
+			feedback: "Please, write your message"
+		},
+		submitHandler: function(form) {
+			form.submit();
+		}
+	});
 });
