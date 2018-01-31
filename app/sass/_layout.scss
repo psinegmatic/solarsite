@@ -3,7 +3,7 @@
 }
 
 .link {
-  color: #00ab65;
+  color: $accent;
   text-decoration: none;
   &:hover {
     color: #00cf7a;
@@ -63,8 +63,8 @@
   border-bottom: 3px solid transparent;
   transition: all 0.3s;
   &:hover {
-    color: #00ab65;
-    border-bottom: 3px solid #00ab65;
+    color: $accent;
+    border-bottom: 3px solid $accent;
     transition: all 0.3s;
   }
   &--contacts {
@@ -114,7 +114,7 @@
 }
 
 .start-home__message {
-  padding-right: 4rem;
+  padding-right: 5rem;
   margin-bottom: 1.5rem;
   @include fontSize(1);
 }
@@ -184,7 +184,7 @@
   &--html {
     top: 19%;
     left: 36%;
-    color: #00ab65;
+    color: $accent;
   }
   &--sql {
     top: 17%;
@@ -196,7 +196,7 @@
   &--node {
     top: 37%;
     left: 80%;
-    color: #00ab65;
+    color: $accent;
   }
   &--blockchain {
     top: 69%;
@@ -280,9 +280,6 @@
   border-radius: 1rem;
   padding: 3rem 6.5rem 2rem 6.5rem;
   box-shadow: 0px 0px 32px 2px rgba(11, 16, 32, 0.45);
-  .btn {
-    margin-bottom: 2rem;
-  }
 }
 
 .feed-form__title {
@@ -308,6 +305,54 @@
   input.error,
   textarea.error {
     border-color: #f24841;
+  }
+}
+
+.form-tools {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .btn {
+    margin-bottom: 2.3rem;
+    max-width: 40%;
+  }
+  .check-icon {
+    display: none;
+    width: 2rem;
+    height: 2rem;
+    position: relative;
+    margin-bottom: 0.5rem;
+    border-radius: 50%;
+    background-color: $accent;
+    &:after {
+      content: '';
+      width: 1rem;
+      height: 0.5rem;
+      display: block;
+      position: absolute;
+      left: 0.5rem;
+      top: 0.75rem;
+      transform: rotate(-45deg);
+      border-left: 2px solid #ffffff;
+      border-bottom: 2px solid #ffffff;
+    }
+  }
+  .message {
+    display: none;
+    font-weight: bold;
+    color: $text;
+    @include fontSize(0.875);
+  }
+  &--sended {
+    .btn {
+      display: none;
+    }
+    .check-icon {
+      display: block;
+    }
+    .message {
+      display: block;
+    }
   }
 }
 
@@ -404,7 +449,7 @@
     }
   }
   &--green {
-    background-color: #00ab65;
+    background-color: $accent;
     svg {
       fill: #0d805a;
     }
@@ -466,14 +511,14 @@
 .btn {
   display: inline-block;
   color: #ffffff;
-  background-color: #00ab65;
+  background-color: $accent;
   border-radius: 3rem;
   padding: 0.75rem 1.75rem;
   @include fontSize(0.875);
   font-weight: 600;
   cursor: pointer;
   outline: none;
-  border-color: #00ab65;
+  border-color: $accent;
   box-shadow: none;
   text-decoration: none;
   border-style: unset;
@@ -585,7 +630,7 @@
 
 .outer-link {
   font-weight: 600;
-  color: #00ab65;
+  color: $accent;
   text-decoration: none;
   &:hover {
     color: #00cf7a;

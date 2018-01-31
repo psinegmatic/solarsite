@@ -65,8 +65,8 @@ $(function() {
 			email: "Пожалуйста, введите mail",
 			feedback: "Сообщение не может быть пустым"
 		},
-		submitHandler: function(form) {
-			form.submit();
+		submitHandler: function(form, event) {
+			ajaxSubmit(form, event);
 		}
 	});
 	$("form[name='contact-en']").validate({
@@ -85,8 +85,29 @@ $(function() {
 			email: "Please, write your email",
 			feedback: "Please, write your message"
 		},
-		submitHandler: function(form) {
-			form.submit();
+		submitHandler: function(form, event) {
+			ajaxSubmit(form, event);
 		}
 	});
 });
+
+var baseApi = "http://localhost:4100/";
+
+//Ajax-обработчик формы
+function ajaxSubmit(form, event) {
+	event.preventDefault();
+	var name = $(form.elements["name"]);
+	var mail = $(form.elements["email"]);
+	var feedback = $(form.elements["feedback"]);
+	$.ajax({
+		type: "POST",
+		url: baseApi + "contact",
+		data: JSON.stringify({name: name[0].value, mail: mail[0].value, feedback: feedback[0].value}),
+		dataType: "json",
+		contentType: "application/json",
+		success: function() {
+			$(".form-tools").addClass('form-tools--sended');
+		}
+	});
+}
+

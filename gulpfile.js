@@ -113,7 +113,6 @@ gulp.task('build', ['removedist', 'imagemin', 'sass', 'js'], function () {
     var buildFonts = gulp.src([
         'app/fonts/**/*'
     ]).pipe(gulp.dest('dist/fonts'));
-
 });
 
 gulp.task('deploy', function () {
@@ -126,11 +125,10 @@ gulp.task('deploy', function () {
     });
     var globs = [
         'dist/**',
-        'dist/.htaccess',
+        'dist/.htaccess'
     ];
     return gulp.src(globs, {buffer: false})
         .pipe(conn.dest('/path/to/folder/on/server'));
-
 });
 
 gulp.task('rsync', function () {
