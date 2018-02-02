@@ -352,6 +352,17 @@
     }
     .message {
       display: block;
+      &--error {
+        display: none;
+      }
+    }
+  }
+  &--error {
+    .message--error {
+      display: block;
+      position: absolute;
+      bottom: 0.5rem;
+      color: #f4573d;
     }
   }
 }

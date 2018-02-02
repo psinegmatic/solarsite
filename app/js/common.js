@@ -99,6 +99,7 @@ function ajaxSubmit(form, event) {
 	var name = $(form.elements["name"]);
 	var mail = $(form.elements["email"]);
 	var feedback = $(form.elements["feedback"]);
+	$(".form-tools").removeClass('form-tools--error');
 	$.ajax({
 		type: "POST",
 		url: baseApi + "contact",
@@ -107,6 +108,9 @@ function ajaxSubmit(form, event) {
 		contentType: "application/json",
 		success: function() {
 			$(".form-tools").addClass('form-tools--sended');
+		},
+		error: function () {
+			$(".form-tools").addClass('form-tools--error');
 		}
 	});
 }
