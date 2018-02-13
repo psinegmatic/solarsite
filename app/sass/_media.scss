@@ -31,9 +31,28 @@
   .burger-toggle {
     display: none;
   }
+  .main-header__top {
+    .main-nav {
+      margin-top: 10px;
+    }
+    .main-logo {
+      margin-left: -25px;
+    }
+  }
+  .main-section__title {
+    padding-right: 6rem;
+  }
 }
 
 @media only screen and (max-width : 1199px) {
+  .main-header__top {
+    .main-logo {
+      svg {
+        width: 150px;
+        height: 80px;
+      }
+    }
+  }
   .main-nav__item {
     .main-nav__link {
       &--contacts {
@@ -54,6 +73,14 @@
 }
 
 @media only screen and (max-width : 991px) {
+  .main-header__top {
+    .main-logo {
+      svg {
+        width: 150px;
+        height: 70px;
+      }
+    }
+  }
   .fixed-wrapper {
     &--fixed {
       max-height: 0;
@@ -83,7 +110,7 @@
   }
   .main-nav {
     left: 0;
-    top: 104px;
+    top: 70px;
     position: absolute;
     flex-wrap: wrap;
     max-height: 0;
@@ -328,6 +355,9 @@
   .main-footer__item {
     width: 100%;
     margin: 0;
+    &.main-logo {
+      margin-left: -0.9rem;
+    }
     &--disc {
       margin-bottom: 2rem;
     }
@@ -393,11 +423,23 @@
   .main-header {
     background: url('../img/gadgets-bg.png') 50% 28rem/75% no-repeat, url('../img/cicles-header.png') 86% 110%/60% no-repeat, linear-gradient(to bottom, #ffffff, #ebf5ff);
   }
+  .main-feature__text {
+    padding: 0 0.5rem;
+  }
+  .contacts__form {
+    padding: 3rem 1rem;
+  }
 }
 
 @media only screen and (max-width : 380px) {
   .main-header {
     background: url('../img/gadgets-bg.png') 50% 34rem/75% no-repeat, url('../img/cicles-header.png') 86% 110%/60% no-repeat, linear-gradient(to bottom, #ffffff, #ebf5ff);
+  }
+  .main-feature__img {
+    margin: 0 auto 1.5rem auto;
+  }
+  .form-tools .btn {
+    max-width: 100%;
   }
 }
 

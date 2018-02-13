@@ -4,6 +4,7 @@
 
 .link {
   color: $accent;
+  font-weight: bold;
   text-decoration: none;
   &:hover {
     color: #00cf7a;
@@ -53,53 +54,56 @@
   align-items: baseline;
 }
 
-.main-nav__item .main-nav__link {
-  display: flex;
-  padding: 1rem;
-  color: #182a5d;
-  font-weight: 600;
-  @include fontSize(0.875);
-  text-transform: uppercase;
-  border-bottom: 3px solid transparent;
-  transition: all 0.3s;
-  &:hover {
-    color: $accent;
-    border-bottom: 3px solid $accent;
+.main-nav__item {
+  .main-nav__link {
+    display: flex;
+    padding: 1rem;
+    color: #182a5d;
+    font-weight: bold;
+    @include fontSize(0.875);
+    text-transform: uppercase;
+    border-bottom: 3px solid transparent;
     transition: all 0.3s;
-  }
-  &--contacts {
-    position: relative;
-    margin-right: 5rem;
-    &:after {
-      content: '';
-      position: absolute;
-      top: 50%;
-      left: calc(100% + 2.5rem);
-      display: inline-block;
-      width: 2px;
-      height: 1.5rem;
-      background-color: #d3d6e0;
-      transform: translate(-50%, -50%);
-    }
-  }
-  &--second {
-    text-transform: capitalize;
-  }
-  &--lang {
-    padding: 0.75rem;
-    margin-left: 1rem;
-    border-radius: 0.5rem;
-    background-color: #e1eeff;
-    border-bottom: none;
-    transition: 0.35s all;
     &:hover {
-      background-color: #aacfff;
+      color: $accent;
+      border-bottom: 3px solid $accent;
+      transition: all 0.3s;
+    }
+    &--contacts {
+      position: relative;
+      margin-right: 5rem;
+      &:after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: calc(100% + 2.5rem);
+        display: inline-block;
+        width: 2px;
+        height: 1.5rem;
+        background-color: #d3d6e0;
+        transform: translate(-50%, -50%);
+      }
+    }
+    &--second {
+      text-transform: capitalize;
+    }
+    &--lang {
+      padding: 0.75rem;
+      margin-left: 1rem;
+      border-radius: 0.5rem;
+      background-color: #e1eeff;
       border-bottom: none;
-      color: #182a5d;
       transition: 0.35s all;
+      &:hover {
+        background-color: #aacfff;
+        border-bottom: none;
+        color: #182a5d;
+        transition: 0.35s all;
+      }
     }
   }
 }
+
 
 .start-home {
   padding: 11rem 0 19rem 0;
@@ -115,7 +119,7 @@
 
 .start-home__message {
   padding-right: 5rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2.5rem;
   @include fontSize(1);
 }
 
@@ -164,7 +168,7 @@
 .diagram-circle {
   position: relative;
   width: 35rem;
-  height: 34rem;
+  height: 32rem;
   background: url('../img/laptop-bg.png') 48% 100% no-repeat;
 }
 
@@ -179,7 +183,7 @@
   background-color: #ffffff;
   border-radius: 50%;
   font-weight: 600;
-  box-shadow: 0px 0px 15px 5px rgba(0, 36, 186, 0.15);
+  box-shadow: 0 3px 15px 2px rgba(0,36,186,.15);
   transform: translate(-50%, -50%);
   &--html {
     top: 19%;
@@ -377,6 +381,8 @@
   margin-bottom: 1.5rem;
   resize: none;
   transition: 0.35s all;
+  color: #233261;
+  font-family: $default-font;
   &:focus {
     outline: none;
     border-color: #acb2c9;
@@ -413,7 +419,7 @@
 .main-footer__disc {
   display: flex;
   flex-wrap: wrap;
-  @include fontSize(1);
+  @include fontSize(0.875);
   span {
     width: 100%;
   }
@@ -425,6 +431,7 @@
 .socials {
   display: flex;
   align-items: center;
+  @include fontSize(0.875);
 }
 
 .socials__item {
@@ -434,6 +441,7 @@
   svg {
     width: 25px;
     height: 25px;
+    fill: #6a80e7;
   }
 }
 
@@ -449,8 +457,8 @@
   color: #ffffff;
   transition: 0.35s all;
   &:hover {
-    opacity: 0.85;
-    box-shadow: 0 3px 9px rgba(0, 0, 0, .28);
+    opacity: 0.95;
+    box-shadow: 0 3px 15px 2px rgba(0,36,186,.15);
     transition: 0.35s all;
   }
   &--blue {
@@ -481,7 +489,12 @@
 }
 
 .main-card__img {
+  height: 100px;
+  position: relative;
   svg {
+    position: absolute;
+    top: -0.5rem;
+    left: -1rem;
     width: 100px;
     height: 100px;
   }
@@ -544,6 +557,7 @@
   svg {
     width: 210px;
     height: 100px;
+    fill: #0a1e5d;
   }
 }
 
@@ -663,7 +677,7 @@
   p {
     margin-bottom: 2rem;
     @include fontSize(1);
-    color: #5e6377
+    color: #5e6377;
   }
   ul {
     margin-bottom: 2rem;
@@ -672,5 +686,11 @@
   li {
     list-style: disc;
     @include fontSize(1);
+    color: #5e6377;
+  }
+  ol {
+    li {
+      list-style-type: decimal;
+    }
   }
 }
